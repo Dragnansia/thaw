@@ -30,7 +30,7 @@ pub fn Upload(
     let input_ref = NodeRef::<html::Input>::new();
     let trigger_ref = NodeRef::<html::Div>::new();
 
-    Effect::new(move |_| {
+    Effect::new_sync(move |_| {
         let Some(trigger_el) = trigger_ref.get() else {
             return;
         };
